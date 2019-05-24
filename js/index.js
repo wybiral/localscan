@@ -1,7 +1,7 @@
 const thread = (start, stop, callback) => {
     const loop = port => {
         if (port < stop) {
-            fetch('http://localhost:' + port, {
+            fetch('http://127.0.0.1:' + port, {
                 mode: 'no-cors'
             }).then(resp => {
                 callback(port);
